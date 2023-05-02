@@ -1,6 +1,15 @@
-
+import {  toast } from 'react-toastify';
 
 const ContactPage = () => {
+
+
+    const subscriptionHandler = ()=>{
+        toast("Wow! thanks.");
+    }
+
+
+
+
   return (
     <div className="hero  bg-base-200 py-10">
     <div className="hero-content flex-col lg:flex-row-reverse  w-4/5 mx-auto gap-4">
@@ -18,11 +27,12 @@ const ContactPage = () => {
           </div>
           
           <div className="form-control mt-6">
-            <button className="btn btn-primary">subscribe news latter </button>
+            <button onClick={subscriptionHandler} className="btn btn-primary">subscribe news latter </button>
           </div>
         </div>
       </div>
     </div>
+    
   </div>
   )
 }
