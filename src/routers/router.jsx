@@ -3,6 +3,8 @@ import {
   } from "react-router-dom";
   import HomePage from "../pages/HomePag";
 import MainLayout from "../layaouts/MainLayout";
+import LoginPage from "../pages/LoginPage";
+import PageNotFound404 from "../pages/PageNotFound404";
 
   const router = createBrowserRouter([
     {
@@ -12,6 +14,10 @@ import MainLayout from "../layaouts/MainLayout";
         {
             path: "/",
             element: <HomePage/>,
+        },
+        {
+            path: "/login",
+            element: <LoginPage/>,
         },
         {
             path: "/about",
@@ -48,6 +54,10 @@ import MainLayout from "../layaouts/MainLayout";
             element: <div>Hello chefsId!</div>,
             }]
         },
+        {
+            path: "*",
+            element: <PageNotFound404 />,
+          },
         
       ]
 
