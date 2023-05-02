@@ -2,6 +2,8 @@ import { Link, useNavigate } from "react-router-dom"
 import logo from "../assets/logo.png"
 import { useContext } from "react"
 import { AuthContext } from "../providers/AuthProviders"
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 
 const Header = () => {
   const { user, logoutUser, setUser} = useContext(AuthContext);
@@ -37,7 +39,7 @@ const handleLogout  = () => {
         <li><Link to='/Contact'>Contact</Link></li>
         {
           user &&
-        <li ><Link to='/profile' >{user?.photoURL ? <img className="w-7" src={user?.photoURL} /> : user?.displayName}</Link> </li>
+        <li ><Link to='/profile' >{user?.photoURL ? <img className="w-7" data-tooltip-id="user-avatar" src={user?.photoURL} /> : user?.displayName}</Link> </li>
         }
         {
            user ? <>
@@ -46,13 +48,13 @@ const handleLogout  = () => {
         : <>
         <li> <Link className="bg-orange-400  text-white px-7 mx-1 hover:bg-orange-600" to='/login'>Login</Link> </li>
         <li> <Link className="bg-blue-400 text-white px-7 mx-1 hover:bg-blue-600" to='/register'>Register</Link> </li>
-        </>
-        
-        
-
-
+        </> 
         }
-        
+         <Tooltip
+        anchorSelect="#user-avatar"
+        place="bottom"
+        content={user?.displayName}
+      />
         
       </ul>
     </div>
