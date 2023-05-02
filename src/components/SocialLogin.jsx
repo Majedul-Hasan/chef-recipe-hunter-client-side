@@ -29,8 +29,8 @@ const SocialLogin = () => {
     <div className='w-10/12 mx-auto'>
         <div className="divider mb-10">OR</div>
         <button onClick={()=> handleAuth(githubProvider)} className="w-full my-2 border-orange-500 border-2 rounded-full py-2 flex  pl-3 items-center  hover:border-blue-600"> 
-            <span className='text-blue-600 text-4xl w-12 '> <FaGithub  /></span>
-            <span className='text-center flex-auto'>Continue with Facebook</span> 
+            <span className='text-black text-4xl w-12 '> <FaGithub  /></span>
+            <span className='text-center flex-auto'>Continue with github</span> 
         </button>
             <br />
         <button onClick={()=> handleAuth(GoogleProvider)} className=" w-full my-2 border-orange-500 border-2 rounded-full py-2 flex  pl-3 items-center  hover:border-blue-400"> 

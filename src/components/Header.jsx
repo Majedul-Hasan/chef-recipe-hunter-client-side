@@ -1,7 +1,23 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import logo from "../assets/logo.png"
+import { useContext } from "react"
+import { AuthContext } from "../providers/AuthProviders"
+import { FaUserCircle } from "react-icons/fa"
 
 const Header = () => {
+  const { user, logoutUser, setUser} = useContext(AuthContext);
+  const navigate = useNavigate()
+
+  
+const handleLogout  = () => {
+  logoutUser()
+  .then(() => {
+    setUser(null)
+    navigate('/')
+
+  })
+}
+
   return (
     <div className="navbar w-4/5 mx-auto py-0">
     <div className="flex-1">
@@ -20,7 +36,26 @@ const Header = () => {
         <li><Link to='/blogs'>Blogs</Link></li>
         <li><Link to='/about'>About us</Link></li>
         <li><Link to='/Contact'>Contact</Link></li>
-        <li> <button className="bg-orange-400 px-7"><Link  to='/login'>Login</Link></button> </li>
+        {
+          user &&
+        <li ><Link to='/profile' >{user?.photoUrl || user?.displayName}</Link> </li>
+        }
+        {
+           user ? <>
+           <button ><FaUserCircle/></button>
+           <button onClick={handleLogout} >Logout</button>
+         </>
+        : <>
+        <li> <Link className="bg-orange-400  text-white px-7 mx-1 hover:bg-orange-600" to='/login'>Login</Link> </li>
+        <li> <Link className="bg-blue-400 text-white px-7 mx-1 hover:bg-blue-600" to='/register'>Register</Link> </li>
+        </>
+        
+        
+
+
+        }
+        
+        
       </ul>
     </div>
   </div>
