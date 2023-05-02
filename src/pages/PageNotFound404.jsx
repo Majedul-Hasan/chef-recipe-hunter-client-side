@@ -6,7 +6,6 @@ const PageNotFound404 = () => {
     <div className="text-transparent">
       <span>0</span>
       <div className=" my-8 mx-12 h-80 w-80 block rounded-full bg-cover bg-center bg-no-repeat -mt-96 " style={{backgroundImage: 'url("https://images.unsplash.com/photo-1531928351158-2f736078e0a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZW1wdHklMjBwbGF0ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60")'}} /> 
-      {/* <div className=" my-8 mx-12 h-80 w-80 block rounded-full bg-cover bg-center bg-no-repeat -mt-96 " style={{backgroundImage: 'url("https://lemonlimes.loftocean.com/elementor/wp-content/uploads/sites/3/2022/10/akemy-mory-wxRf78iq2go-unsplash-2.jpg")'}} />  */}
     </div>
     <div className="ml-0"><span>4</span></div>
   </div>
