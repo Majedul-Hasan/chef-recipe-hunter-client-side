@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom"
 import logo from "../assets/logo.png"
 import { useContext } from "react"
 import { AuthContext } from "../providers/AuthProviders"
-import { FaUserCircle } from "react-icons/fa"
 
 const Header = () => {
   const { user, logoutUser, setUser} = useContext(AuthContext);
@@ -38,12 +37,11 @@ const handleLogout  = () => {
         <li><Link to='/Contact'>Contact</Link></li>
         {
           user &&
-        <li ><Link to='/profile' >{user?.photoUrl || user?.displayName}</Link> </li>
+        <li ><Link to='/profile' >{user?.photoURL ? <img className="w-7" src={user?.photoURL} /> : user?.displayName}</Link> </li>
         }
         {
            user ? <>
-           <button ><FaUserCircle/></button>
-           <button onClick={handleLogout} >Logout</button>
+           <button className="bg-blue-400 text-white px-7 mx-1 hover:bg-blue-600 rounded-lg"  onClick={handleLogout} >Logout</button>
          </>
         : <>
         <li> <Link className="bg-orange-400  text-white px-7 mx-1 hover:bg-orange-600" to='/login'>Login</Link> </li>

@@ -47,7 +47,7 @@ const LoginPage = () => {
       <h3 className="text-2xl font-bold my-7">Login</h3>
           <div className="form-control my-4">
             <label className="label "> 
-            <input className="h-12 flex align-bottom border-b-2 border-opacity-20 w-full pl-2 pb-0 placeholder:text-gray-600" type="text" name="email" placeholder="Username or Email" />
+            <input className="h-12 flex align-bottom border-b-2 border-opacity-20 w-full pl-2 pb-0 placeholder:text-gray-600" type="email" name="email" placeholder="Username or Email" />
             </label>
           </div>
           <div className="form-control my-4">
