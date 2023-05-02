@@ -5,6 +5,7 @@ import {
 import MainLayout from "../layaouts/MainLayout";
 import LoginPage from "../pages/LoginPage";
 import PageNotFound404 from "../pages/PageNotFound404";
+import RegisterPage from "../pages/RegisterPage";
 
   const router = createBrowserRouter([
     {
@@ -20,8 +21,20 @@ import PageNotFound404 from "../pages/PageNotFound404";
             element: <LoginPage/>,
         },
         {
+            path: "/register",
+            element: <RegisterPage/>,
+        },
+        {
             path: "/about",
             element: <div>Hello about!</div>,
+        },
+        {
+            path: "/all-chefs",
+            element: <div>Hello chefs!</div>,
+        },
+        {
+            path: "/chef/:id",
+            element: <div>Hello chefs recipe!</div>,
         },
         {
             path: "/recipes",
@@ -32,16 +45,11 @@ import PageNotFound404 from "../pages/PageNotFound404";
                     element: <div>Hello alphabet!</div>,
                 },
                 {
-                    path: "origin/:origin",
-                    element: <div>Hello origin!</div>,
-                },
-                {
                     path: "category/:cate",
                     element: <div>Hello origin!</div>,
                 },
             ]
-        },
-        
+        },        
         {
             path: "/blogs",
             element: <div>Hello blogs!</div>,
