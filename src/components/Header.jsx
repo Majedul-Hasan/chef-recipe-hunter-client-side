@@ -38,7 +38,12 @@ const handleLogout  = () => {
         <li><Link to='/Contact'>Contact</Link></li>
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <div>
+
+    <Link to='/' className=" normal-case text-xl">
+      <img className="block w-24" src={logo} alt="your recipe" />
+    </Link>
+    </div>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

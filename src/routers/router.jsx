@@ -6,6 +6,7 @@ import MainLayout from "../layaouts/MainLayout";
 import LoginPage from "../pages/LoginPage";
 import PageNotFound404 from "../pages/PageNotFound404";
 import RegisterPage from "../pages/RegisterPage";
+import ContactPage from "../pages/ContactPage";
 
   const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ import RegisterPage from "../pages/RegisterPage";
         {
             path: "/about",
             element: <div>Hello about!</div>,
+        },
+        {
+            path: "/contact",
+            element: <ContactPage/>,
         },
         {
             path: "/all-chefs",
