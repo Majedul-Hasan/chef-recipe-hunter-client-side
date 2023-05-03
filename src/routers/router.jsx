@@ -13,6 +13,7 @@ import AllChefsPage from "../pages/AllChefsPage";
 import ChefsProfilePage from "../pages/ChefsProfilePage";
 import PrivetRoute from "./PrivetRoute";
 import PublicRoute from "./PublicRoute";
+import RecipePage from "../pages/RecipePage";
 
 
   const router = createBrowserRouter([
@@ -54,6 +55,12 @@ import PublicRoute from "./PublicRoute";
             path: "/chef/:id",
             element:<PrivetRoute><ChefsProfilePage /></PrivetRoute>  ,
             loader : ({params})=> fetch(`${import.meta.env.VITE_API_SERVER}/recipes/${params.id}`)          //done
+
+        },
+        {
+            path: "/recipe/:chefid/:mealid",
+            element:<PrivetRoute><RecipePage /></PrivetRoute>  ,
+            loader : ({params})=> fetch(`${import.meta.env.VITE_API_SERVER}/recipe/${params.mealid}`)          //done
 
         },
         {

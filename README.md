@@ -108,14 +108,14 @@
 
 1. When a user clicks on a chef's **View Recipes** button, he/she will be redirected to the **Chef Recipes** page. The *Chef Recipes* page will have the following : 
 
-    -   **Banner** - chef picture, chef name, a short bio/description, likes, number of recipes, and years of experience. Recipes
+    -   **Banner** - chef picture, chef name, a short bio/description, likes, number of recipes, and years of experience. Recipes ✅
 
     -   Think about a section displaying the information of the selected chef's recipes in a tabular form or in a card group.
     > Each recipe info should contain the recipe name, ingredients (at least 5), cooking method, rating, and a Favorite button. **Show at least 3 recipes.** for each chef. *If needed, you can have duplicate recipes for each chef* 
 
 1. When clicking the Favorite button, show a toast message showing the recipe is your favorite and disable the button. 
 
-2. Show a spinner when the data is in a loading state 
+2. Show a spinner when the data is in a loading state ✅
 
 2. Create a 404 page. Add a picture on the 404 page. ✅
 
@@ -143,7 +143,7 @@
     4. What is a custom hook, and why will you create a custom hook?
 
 
-1. The Chef Recipe page will be a private/protected page. If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route.
+1. The Chef Recipe page will be a private/protected page. If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route. ✅
 
 2. Apply lazy load to the chef picture either on the banner of `Chef Recipes` or on the chef pictures of the six cards on the Homepage.
 
@@ -151,9 +151,9 @@
 
 2. FUN: The blog page, Create a heading and add an icon/ button. When you click on that button, it will create a pdf and will be downloaded ( This will give you some fun. Try out this after completing all of your tasks. Hint: Explore `react-to-pdf` package). Your pdf should contain some information about the blog page.
 
-2. Make sure your site looks reasonable. The design and color selection is meaningful.
+2. Make sure your site looks reasonable. The design and color selection is meaningful. ✅
 
-3. Clean and organized Code (folder structure). Organize components with meaningful names, and add comments when needed.
+3. Clean and organized Code (folder structure). Organize components with meaningful names, and add comments when needed. ✅
 
 ## Optional (But Highly Recommended):
 ---
@@ -174,7 +174,7 @@
 
 3. Add something extra of your own. This will help you in the future to differentiate your project from others.
 
-4. If you want to take a challenge. Consider using `react-leaflet` anywhere in your application
+4. If you want to take a challenge. Consider using `react-leaflet` anywhere in your application ✅
 
 ### Additional information:
 

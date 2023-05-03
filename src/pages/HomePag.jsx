@@ -35,7 +35,7 @@ console.log(category);
 
   return (
     <>
-      <SectionHero pageName = 'your recipe home page' pageStory = 'search your favorite recipes by  world famous chefs' />
+      <SectionHero pageName = 'your favorite Italian recipes' pageStory = 'search your favorite recipes by  world famous chefs' />
       <SectionHeader >Find  world famous chefs recipes</SectionHeader>
       <div className="grid md:grid-cols-2 sm:grid-cols-1  lg:grid-cols-3 w-4/5 mx-auto gap-9 my-8">
         {
