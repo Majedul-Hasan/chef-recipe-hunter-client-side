@@ -16,7 +16,7 @@ const RecipePage = () => {
     <>
     <ChefsHero name={strMeal} bio= {`prepared by: ${name} `} photoUrl= {strMealThumb}  />
     
-    <div className="grid grid-cols-1 md:grid-cols-3 my-8 md:w-4/5 w-full md:mx-auto mx-1 gap-9 ">
+    <div className="grid grid-cols-1 md:grid-cols-3 my-8 md:w-4/5 w-full md:mx-auto mx-1 gap-9 border-b-4 border-indigo-400 pb-8 ">
         <div className="recipe-container col-span-2">
           <div className="underline">
             <SectionHeader>{strMeal}</SectionHeader>
@@ -31,6 +31,19 @@ const RecipePage = () => {
         <CardChef chef = {chefsProfil} />
         </div>
     </div>
+    <div className=" my-8 md:w-4/5 w-full md:mx-auto mx-1 gap-9 border-b-4 border-indigo-400 pb-8 ">
+      <SectionHeader> cooking method/Instructions  </SectionHeader>
+      <p>
+        {strInstructions}
+      </p>
+      <div className="flex justify-center my-8">
+        <img src={strMealThumb} alt="" />
+      </div>
+
+
+    </div>
+
+
     </>
   )
 }
