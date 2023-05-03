@@ -1,4 +1,5 @@
 import {
+    Navigate,
     createBrowserRouter,
   } from "react-router-dom";
   import HomePage from "../pages/HomePag";
@@ -16,6 +17,8 @@ import PublicRoute from "./PublicRoute";
 import RecipePage from "../pages/RecipePage";
 import TermsPage from "../pages/TermsPage";
 import AllRecipesPage from "../pages/AllRecipesPage";
+import PrimaryFetchedRecipes from "../components/PrimaryFetchedRecipes";
+import AlphaFetchedRecipes from "../components/AlphaFetchedRecipes";
 
 
   const router = createBrowserRouter([
@@ -70,12 +73,27 @@ import AllRecipesPage from "../pages/AllRecipesPage";
 
         },
         {
+            path: "/recipe/:mealid",
+            element: <PrivetRoute><RecipePage /></PrivetRoute>,
+            loader : ({params})=> fetch(`${import.meta.env.VITE_API_SERVER}/recipe/${params.mealid}`)          //done
+
+        },
+        {
             path: "/recipes",
-            element: <PrivetRoute><AllRecipesPage/> </PrivetRoute>, 
+            element: <PrivetRoute><AllRecipesPage/> </PrivetRoute>,            
             children:[
                  {
+                    path: "",
+                    element: <PrimaryFetchedRecipes/>,
+                    loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/recipes-all/6`) ,
+                    
+                },
+                 {
                     path: "alphabetical/:alphabet",
-                    element: <div>Hello alphabet!</div>,
+                    element:<AlphaFetchedRecipes />,
+                    loader : ({params})=> fetch(`${import.meta.env.VITE_API_SERVER}/recipe/alpha/${params.alphabet}`) ,
+
+                    
                 },
                 {
                     path: "category/:cate",
