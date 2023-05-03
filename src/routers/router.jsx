@@ -9,6 +9,7 @@ import RegisterPage from "../pages/RegisterPage";
 import ContactPage from "../pages/ContactPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import ProfilePage from "../pages/ProfilePage";
+import AllChefsPage from "../pages/AllChefsPage";
 
   const router = createBrowserRouter([
     {
@@ -42,7 +43,8 @@ import ProfilePage from "../pages/ProfilePage";
         },
         {
             path: "/all-chefs",
-            element: <div>Hello chefs!</div>,
+            element: <AllChefsPage /> ,
+            loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/chefsProfile-all`)
         },
         {
             path: "/chef/:id",
