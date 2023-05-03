@@ -12,6 +12,7 @@ import ProfilePage from "../pages/ProfilePage";
 import AllChefsPage from "../pages/AllChefsPage";
 import ChefsProfilePage from "../pages/ChefsProfilePage";
 import PrivetRoute from "./PrivetRoute";
+import PublicRoute from "./PublicRoute";
 
 
   const router = createBrowserRouter([
@@ -26,11 +27,11 @@ import PrivetRoute from "./PrivetRoute";
         },
         {
             path: "/login",
-            element: <LoginPage/>,  //done
+            element: <PublicRoute><LoginPage/></PublicRoute> ,  //done
         },
         {
             path: "/register",
-            element: <RegisterPage/>,       //done
+            element:<PublicRoute><RegisterPage/></PublicRoute> ,       //done
         },
         {
             path: "/profile",

@@ -13,6 +13,7 @@ const LoginPage = () => {
   const navigate = useNavigate()
 
   const from = location.state?.from?.pathname || "/";
+  // console.log(from);
 
   const handleLogin = (e) => {
     e.preventDefault()
@@ -26,18 +27,13 @@ const LoginPage = () => {
     .then((res) => {
       setUser(res.user)
       navigate(from, { replace: true })
-
     })
     .catch(error =>{ 
       // const errorCode = error.code;
       const errorMessage = error.message;
       setErrorMsg( errorMessage )
     })
-
   }
-
-
-
 
   return (
     <div className=" w-2/5 mx-auto my-20 ">
@@ -78,7 +74,7 @@ const LoginPage = () => {
         </form>        
 
       </div>   
-        <SocialLogin />
+        <SocialLogin from ={from} />
     
         </div>
   )

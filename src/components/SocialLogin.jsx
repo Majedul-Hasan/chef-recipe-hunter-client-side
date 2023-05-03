@@ -4,21 +4,25 @@ import LogoGoogle from './icons/LogoGoogle';
 import {  GithubAuthProvider, GoogleAuthProvider,   } from 'firebase/auth';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProviders';
+import { useNavigate } from 'react-router-dom';
 
 
 
-const SocialLogin = () => {
+// eslint-disable-next-line react/prop-types
+const SocialLogin = ({from}) => {
   const { signInWithPopupForSocials, setUser} = useContext(AuthContext)
-
+  const navigate = useNavigate()
   const GoogleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
-
+const nnnn = from || '/'
   const handleAuth= (provider)=>{
     signInWithPopupForSocials(provider)
     .then(res => {
       const loggedinUser = res.user
       console.log(loggedinUser);
       setUser(loggedinUser);
+      navigate(nnnn, { replace: true })
+
     })
     .catch(err=>{
       console.error(err)
