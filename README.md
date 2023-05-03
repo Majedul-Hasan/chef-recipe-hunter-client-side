@@ -116,20 +116,20 @@
 
 2. Show a spinner when the data is in a loading state 
 
-2. Create a 404 page. Add a picture on the 404 page.
+2. Create a 404 page. Add a picture on the 404 page. ✅
 
-3. Use the Environment variable to hide the Firebase config keys. 
+3. Use the Environment variable to hide the Firebase config keys.  ✅
 
-4. Add "active route" to indicate the route which you are visiting.
+4. Add "active route" to indicate the route which you are visiting. ✅
 
 
 ## Bonus Requirements
 ## **Bonus**
-1. Minimum 12 meaningful git commits on the client-side repository and minimum of 5 meaningful commits on the server-side repository.
+1. Minimum 12 meaningful git commits on the client-side repository and minimum of 5 meaningful commits on the server-side repository.  ✅
 
-1. Create a readme for **client-side** and write about your project (at least 5 bullet points) .Do not forget to add your live site link of your website here. 
+1. Create a readme for **client-side** and write about your project (at least 5 bullet points) .Do not forget to add your live site link of your website here.  ✅
 
-2. Make your website home page mobile & desktop responsive (tablet responsive is optional) 
+2. Make your website home page mobile & desktop responsive (tablet responsive is optional)  
 
 3. Create a `blogs` page route where you will have to answer the following questions 
 

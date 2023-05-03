@@ -6,8 +6,8 @@ const SectionHero = ({pageName, pageStory}) => {
     <div className="">
         <div className="flex flex-row ">
         <div className=" md:w-full text-center">
-            <h2 className="uppercase text-6xl font-bold my-3">{pageName}</h2>
-            <p className="text-2xl">{pageStory}</p>
+            <h2 className="uppercase lg:text-5xl md:text-4xl sm:text-3xl text-xl font-bold my-3">{pageName}</h2>
+            <p className="lg:text-2xl md:text-xl sm:text-sm text-xs">{pageStory}</p>
         </div>
         </div>
     </div>
