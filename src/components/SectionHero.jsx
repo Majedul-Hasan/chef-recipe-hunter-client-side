@@ -1,6 +1,7 @@
 
 
 
+// eslint-disable-next-line react/prop-types
 const SectionHero = ({pageName, pageStory}) => {
   return (
     <section className="page_header bg-cover bg-center py-20 min-h-[50vh] text-white flex items-center justify-center" style={{backgroundImage: 'url("https://demo.web3canvas.com/themeforest/tomato/img/header/1.jpg")'}}>

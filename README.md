@@ -87,27 +87,28 @@
     -   A user cannot submit empty email and password fields ✅
 
 
-6. On the Homepage: There will be a banner section. You can make it a reasonable banner. That be text on one side, and picture in another side. Or it could be text with background pictures. It could be a slider or a carousel. You can make it the way you want.
+6. On the Homepage: There will be a banner section.
+  - You can make it a reasonable banner.  That be text on one side, and picture in another side. Or it could be text with background pictures. It could be a slider or a carousel. You can make it the way you want. ✅
 
-7. The home page will have a Chef section with at least six cards. Each card will have the following information: 
+7. The home page will have a Chef section with at least six cards. Each card will have the following information:  ✅
 
-    -   Chef Picture
+    -   Chef Picture ✅
 
-    -   Chef Name
+    -   Chef Name ✅
 
-    -   Years of experience
+    -   Years of experience ✅
 
-    -   Numbers of recipes
+    -   Numbers of recipes ✅
 
-    -   Likes
+    -   Likes ✅
 
-    -   View Recipes Button
+    -   View Recipes Button ✅
 
 1. Add at least **two** extra sections on the home page. Make sure the sections are meaningful for the website you are building.
 
 1. When a user clicks on a chef's **View Recipes** button, he/she will be redirected to the **Chef Recipes** page. The *Chef Recipes* page will have the following : 
 
-    -   **Banner** - chef picture, chef name, a short bio/description, likes, number of recipes, and years of experience.
+    -   **Banner** - chef picture, chef name, a short bio/description, likes, number of recipes, and years of experience. Recipes
 
     -   Think about a section displaying the information of the selected chef's recipes in a tabular form or in a card group.
     > Each recipe info should contain the recipe name, ingredients (at least 5), cooking method, rating, and a Favorite button. **Show at least 3 recipes.** for each chef. *If needed, you can have duplicate recipes for each chef* 
@@ -129,7 +130,7 @@
 
 1. Create a readme for **client-side** and write about your project (at least 5 bullet points) .Do not forget to add your live site link of your website here.  ✅
 
-2. Make your website home page mobile & desktop responsive (tablet responsive is optional)  
+2. Make your website home page mobile & desktop responsive (tablet responsive is optional) ✅
 
 3. Create a `blogs` page route where you will have to answer the following questions 
 

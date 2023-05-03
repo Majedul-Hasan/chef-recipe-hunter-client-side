@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 
+// eslint-disable-next-line react/prop-types
 const CardChef = ({chef}) => {
     const {_id, name, recipes,  experience, photoUrl, likes } = chef ||{}
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-full  bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
     <img src={photoUrl} alt={name} className="rounded-xl" />
   </figure>
@@ -12,9 +13,9 @@ const CardChef = ({chef}) => {
     <p className="my-2 text-lg"><span className="mx-2 text-violet-600 font-bold bg-blue-200 py-1 px-2 rounded-md ">{experience} </span> years of experience!!</p>
     <p className="my-2 text-lg"><span className="mx-2 text-violet-600 font-bold bg-blue-200 py-1 px-2 rounded-md ">{recipes.length } </span> own recipes !!</p>
     <p className="my-2 text-lg"><span className="mx-2 text-violet-600 font-bold bg-blue-200 py-1 px-2 rounded-md ">{recipes.length } </span> own recipes !!</p>
-    <p className="my-2 text-lg"><span className="mx-2 text-violet-600 font-bold bg-blue-200 py-1 px-2 rounded-md ">{likes } </span> people likes chef's recipes !!</p>
+    <p className="my-2 text-lg"><span className="mx-2 text-violet-600 font-bold bg-blue-200 py-1 px-2 rounded-md ">{likes } </span> people likes chef&#39;s recipes !!</p>
     <div className="card-actions justify-center mt-2 py-3">
-      <Link to={`/chef/${_id}`}  className="btn border-0 bg-orange-400 hover:bg-blue-500 ">view chefs profile</Link>
+      <Link to={`/chef/${_id}`}  className="btn border-0 bg-orange-400 hover:bg-blue-500 ">view chefs Recipes</Link>
     </div>
   </div>
 </div>

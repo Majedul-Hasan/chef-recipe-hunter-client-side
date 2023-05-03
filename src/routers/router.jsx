@@ -18,7 +18,7 @@ import ProfilePage from "../pages/ProfilePage";
         {
             path: "/",
             element: <HomePage/>,
-            loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/chefsProfile-all`)
+            loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/chefsProfile-all/6`)
         },
         {
             path: "/login",

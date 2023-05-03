@@ -61,8 +61,8 @@ const handleLogout  = () => {
   {
           user ? 
         <button onClick={()=>setProfileVisible(x=>!x)} >{user?.photoURL ? <img className="w-7" data-tooltip-id="user-avatar" data-tooltip-content= {user?.displayName} src={user?.photoURL} /> : user?.displayName}</button> : <>
-         <Link className="bg-orange-400  text-white px-7  py-2 rounded-lg mx-1 hover:bg-orange-600" to='/login'>Login</Link>
-         <Link className="bg-blue-400 text-white px-7 py-2 rounded-lg mx-1 hover:bg-blue-600" to='/register'>Register</Link>
+         <Link className="bg-orange-400  text-white sm:px-7 px-2  py-2 rounded-lg sm:mx-1 mx-0  hover:bg-orange-600" to='/login'>Login</Link>
+         <Link className="bg-blue-400 text-white px-7 py-2 rounded-lg mx-1 hover:bg-blue-600 hidden sm:flex " to='/register'>Register</Link>
         </> 
         }
          {
