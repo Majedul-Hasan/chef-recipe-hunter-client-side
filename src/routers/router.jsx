@@ -14,6 +14,7 @@ import ChefsProfilePage from "../pages/ChefsProfilePage";
 import PrivetRoute from "./PrivetRoute";
 import PublicRoute from "./PublicRoute";
 import RecipePage from "../pages/RecipePage";
+import TermsPage from "../pages/TermsPage";
 
 
   const router = createBrowserRouter([
@@ -37,6 +38,10 @@ import RecipePage from "../pages/RecipePage";
         {
             path: "/profile",
             element: <ProfilePage/>,
+        },
+        {
+            path: "/terms",
+            element: <TermsPage/>,
         },
         {
             path: "/about",

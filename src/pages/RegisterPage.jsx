@@ -25,8 +25,8 @@ const RegisterPage = () => {
     const terms = formInput.terms.checked
    
     // const displayName = 
-    console.log(errorMsg);
-    console.table({name, email, password, confirm, terms});
+    // console.log(errorMsg);
+    // console.table({name, email, password, confirm, terms});
     if(password !== confirm) {
       setErrorMsg('password not matched')
       return
@@ -47,7 +47,7 @@ const RegisterPage = () => {
     createUser(email, password)
     .then(res =>{
       const loggedUser = res.user
-      console.log(loggedUser);      
+      // console.log(loggedUser);      
       setUser(loggedUser);    
       updateUser( name, photoUrl)
       formInput.reset()

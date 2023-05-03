@@ -19,7 +19,7 @@ const nnnn = from || '/'
     signInWithPopupForSocials(provider)
     .then(res => {
       const loggedinUser = res.user
-      console.log(loggedinUser);
+      // console.log(loggedinUser);
       setUser(loggedinUser);
       navigate(nnnn, { replace: true })
 

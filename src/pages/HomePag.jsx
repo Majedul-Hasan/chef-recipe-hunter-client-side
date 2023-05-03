@@ -10,7 +10,7 @@ const HomePage = () => {
   const data = useLoaderData()
   const [origin, setOrigin] = useState([])
   const [category, setCategory] = useState([])
-  console.log(data);
+  // console.log(data);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_SERVER}/country`)
@@ -29,7 +29,7 @@ const HomePage = () => {
     )
     
   }, [])
-console.log(category);
+// console.log(category);
   
 
 

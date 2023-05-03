@@ -67,7 +67,11 @@ const handleLogout  = () => {
         }
          {
     profileVisible ? <div className="w-48 absolute top-6 bg-slate-200  text-right "> <ul className="menu w-full items-end">
-    <li className="flex justify-between w-full" > <Link to='/profile'  ><span> <img className="w-7" data-tooltip-id="user-avatar" data-tooltip-content= {user?.displayName} src={user?.photoURL} /></span><span> {user?.displayName}</span></Link></li>
+    <li className="flex justify-between w-full" > 
+    <Link to='/profile'  >
+      <span><img className="w-7" data-tooltip-id="user-avatar" data-tooltip-content= {user?.displayName} src={user?.photoURL} /></span>
+      <span> {user?.displayName}</span>
+      </Link></li>
     <li className="w-full text-center">
     <button className="bg-blue-400 text-white w-full flex justify-center  hover:bg-blue-600 rounded-lg"  onClick={handleLogout} >Logout</button>
     </li>

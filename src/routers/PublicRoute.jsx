@@ -9,8 +9,8 @@ const PublicRoute = ({children}) => {
     const location = useLocation()
 
     
-  const from = location.state?.from?.pathname || "/";
-  console.log(from);
+//   const from = location.state?.from?.pathname || "/";
+//   console.log(from);
 
     if(isLoading){
         return <Spinner animation="border" variant="warning" />

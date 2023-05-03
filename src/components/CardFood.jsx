@@ -7,7 +7,7 @@ const CardFood = ({recipe, chef_id}) => {
     const {strCategory, strArea, strIngredients, strInstructions, strMeal, strMealThumb, strSource, strTags , idMeal} = recipe || {};
     const strIngredientsLength =Object.keys(strIngredients)
     const ingredientsList = strTags?.split(',')||[]; 
-    console.log(ingredientsList);
+    // console.log(ingredientsList);
    
     return (
         <div className="card w-full  bg-base-100 shadow-xl overflow-hidden ">
