@@ -19,6 +19,7 @@ import TermsPage from "../pages/TermsPage";
 import AllRecipesPage from "../pages/AllRecipesPage";
 import PrimaryFetchedRecipes from "../components/PrimaryFetchedRecipes";
 import AlphaFetchedRecipes from "../components/AlphaFetchedRecipes";
+import CategoryFetchedRecipes from "../components/CategoryFetchedRecipes";
 
 
   const router = createBrowserRouter([
@@ -91,13 +92,12 @@ import AlphaFetchedRecipes from "../components/AlphaFetchedRecipes";
                  {
                     path: "alphabetical/:alphabet",
                     element:<AlphaFetchedRecipes />,
-                    loader : ({params})=> fetch(`${import.meta.env.VITE_API_SERVER}/recipe/alpha/${params.alphabet}`) ,
-
-                    
+                    loader : ({params})=> fetch(`${import.meta.env.VITE_API_SERVER}/recipe/alpha/${params.alphabet}`) ,                    
                 },
                 {
                     path: "category/:cate",
-                    element: <div>Hello origin!</div>,
+                    element: < CategoryFetchedRecipes />,
+                    loader : ({params})=> fetch(`${import.meta.env.VITE_API_SERVER}/recipe/strCategory/${params.cate}`) ,
                 },
             ]
         },        

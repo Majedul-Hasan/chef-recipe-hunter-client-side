@@ -1,6 +1,7 @@
 import { Link, Outlet} from "react-router-dom"
 import SectionHero from "../components/SectionHero"
 import SectionHeader from "../components/SectionHeader"
+import SectionCategory from "../components/SectionCategory"
 
 
 
@@ -20,17 +21,9 @@ const AllRecipesPage = () => {
         <div className="border-t-4 border-b-4 border-indigo-400 py-8 my-8">
             <Outlet />
 
-
+ 
         </div>
-            <SectionHeader>find recipe by Alphabet</SectionHeader>
-        <div className="my-7 w-4/5 flex flex-wrap justify-center mx-auto">
-        {
-            alpha.map((alp , i) => <Link to={`/recipes/alphabetical/${alp}`} className="bg-indigo-100 text-indigo-500 hover:bg-indigo-500 uppercase font-bold hover:text-indigo-50 py-2 px-4 my-4 mx-2 " key={i}>{alp}</Link>)
-        }
-        </div>
-
-
-
+        <SectionCategory />
     </div>
   )
 }
