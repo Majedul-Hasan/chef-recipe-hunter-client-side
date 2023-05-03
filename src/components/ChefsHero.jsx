@@ -1,10 +1,19 @@
-import { BsMagic } from "react-icons/Bs";
+import { BsMagic, BsFillBox2HeartFill } from "react-icons/Bs";
 import { AiFillLike } from "react-icons/Ai";
 import { GiHotMeal } from "react-icons/Gi";
 import SectionHeader from "./SectionHeader";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 // eslint-disable-next-line react/prop-types
 const ChefsHero = ({name, bio, photoUrl, experience, likes, recipes}) => {
+  const [vote, setVote] = useState(likes)
+
+  const voteHandler = () =>{
+    setVote((x)=> x+1 )
+    toast("Wow, thank you for like !")
+    
+  }
   return (
     <section className="page_header bg-cover bg-center py-20 min-h-[50vh] text-white flex flex-col md:flex-row justify-between" style={{backgroundImage: `url(${photoUrl})`}}>
     <div className="bg-black/40 mx-2 p-5">
@@ -23,9 +32,12 @@ const ChefsHero = ({name, bio, photoUrl, experience, likes, recipes}) => {
               (experience || likes || recipes ) && <div className=" md:w-full py-9 ">
               <SectionHeader>Chef's info</SectionHeader>
             <p className= " my-4 lg:text-2xl md:text-xl max-w-xs sm:text-sm text-xs flex"><span className="font-bold text-white mr-1 "><BsMagic ></BsMagic></span> <span className="font-bold text-red-500 mr-3">{experience}</span>   years of experience</p>
-            <p className= " my-4 lg:text-2xl md:text-xl max-w-xs sm:text-sm text-xs flex"><span className="font-bold text-white mr-1 "><AiFillLike ></AiFillLike></span> <span className="font-bold text-red-500 mr-3">{likes}</span> Likes </p>
+            <p className= " my-4 lg:text-2xl md:text-xl max-w-xs sm:text-sm text-xs flex"><span className="font-bold text-white mr-1 "><AiFillLike ></AiFillLike></span> <span className="font-bold text-red-500 mr-3">{vote}</span> Likes </p>
             {/* eslint-disable-next-line react/prop-types */}
             <p className= " my-4 lg:text-2xl md:text-xl max-w-xs sm:text-sm text-xs flex"><span className="font-bold text-white mr-1 "><GiHotMeal ></GiHotMeal></span> <span className="font-bold text-red-500 mr-3"> {recipes.length}</span>  popular Italian recipes </p>
+            <div onClick={voteHandler} className= " my-4 lg:text-2xl md:text-xl max-w-xs sm:text-sm text-xs flex justify-center items-center py-2 rounded-lg cursor-pointer hover:bg-sky-800 bg-sky-600">
+              <span  className="font-bold text-white mr-3 "><AiFillLike/></span> add like
+            </div>
               
             </div>
             }

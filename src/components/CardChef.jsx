@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom"
+import LazyLoad from 'react-lazy-load';
+
 
 // eslint-disable-next-line react/prop-types
 const CardChef = ({chef}) => {
     const {_id, name, recipes,  experience, photoUrl, likes } = chef ||{}
+   
+
+
   return (
     <div className="card w-full  bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
+  <LazyLoad threshold={0.55}  width={400} height={250}>
     <img src={photoUrl} alt={name} className="rounded-xl" />
+
+  </LazyLoad>
   </figure>
   <div className="card-body ">
     <h2 className="card-title text-2xl border-b-2 flex pb-3 justify-center">{name}</h2>

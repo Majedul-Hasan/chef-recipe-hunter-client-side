@@ -43,18 +43,18 @@
 <ol> 
     <li>Create a website that shows the recipes of all available chefs. </li> ✅
     <li>The website must be exclusively dedicated to one cuisine(Bangladeshi, Chinese, Indian, Mediterranean, Thai, Japanese, Italian, African, Vietnamese, Srilankan, Nepalese, American, Korean, Mexican, Australian, Afgan, French, etc.). </li> ✅
-    <li>if you give Chinese Chef and Chinese food recipes, it will only have Chinese Chef and Chinese food recipes. You cannot add recipes from other countries—only one country chef and recipe.</li>   
+    <li>if you give Chinese Chef and Chinese food recipes, it will only have Chinese Chef and Chinese food recipes. You cannot add recipes from other countries—only one country chef and recipe.</li>    ✅
 </li>
 </ol>
 
 
 1. Make sure your design is unique. 
-    > First, select the cuisine type. Google the site design or visit ThemeForest to get your website idea. However, your website cannot relate to your previous assignments or any demo project displayed in the course or our conceptual sessions. 
+    > First, select the cuisine type. Google the site design or visit ThemeForest to get your website idea. However, your website cannot relate to your previous assignments or any demo project displayed in the course or our conceptual sessions.  ✅
 
 2. Give your website a name. The name should appear on the website and be displayed on the website's title. ✅
 
 3. Your website should have a navbar.  ✅
-    > with the **Website name, Home, Blog** and **User profile picture**. The **user profile picture** on the navbar is conditional. If the user is signed in, the navbar will show the profile picture; otherwise, it will show the **Login button.** *If the user name is available, the user's name will be visible when the mouse hovers over the profile picture.*
+    > with the **Website name, Home, Blog** and **User profile picture**. The **user profile picture** on the navbar is conditional. If the user is signed in, the navbar will show the profile picture; otherwise, it will show the **Login button.** *If the user name is available, the user's name will be visible when the mouse hovers over the profile picture.* ✅
 
 4. Create a reasonable and meaningful footer. ✅
     > Make sure that the navbar and footer are present on all pages:
@@ -110,10 +110,10 @@
 
     -   **Banner** - chef picture, chef name, a short bio/description, likes, number of recipes, and years of experience. Recipes ✅
 
-    -   Think about a section displaying the information of the selected chef's recipes in a tabular form or in a card group.
+    -   Think about a section displaying the information of the selected chef's recipes in a tabular form or in a card group.  ✅
     > Each recipe info should contain the recipe name, ingredients (at least 5), cooking method, rating, and a Favorite button. **Show at least 3 recipes.** for each chef. *If needed, you can have duplicate recipes for each chef* 
 
-1. When clicking the Favorite button, show a toast message showing the recipe is your favorite and disable the button. 
+1. When clicking the Favorite button, show a toast message showing the recipe is your favorite and disable the button.  ✅
 
 2. Show a spinner when the data is in a loading state ✅
 
@@ -145,7 +145,7 @@
 
 1. The Chef Recipe page will be a private/protected page. If you reload the protected/private route (after login), this page will not redirect the user to the login page. Instead, it will keep the logged-in user on the protected route. ✅
 
-2. Apply lazy load to the chef picture either on the banner of `Chef Recipes` or on the chef pictures of the six cards on the Homepage.
+2. Apply lazy load to the chef picture either on the banner of `Chef Recipes` or on the chef pictures of the six cards on the Homepage. ✅
 
     > Hint: Google `React Awesome components`, go to the GitHub repo, find `react-lazy-load`, and try it. Alternatively, you can try any other package as well. 
 
@@ -163,16 +163,20 @@
 
 2. When a user clicks on their profile image, it will redirect to the user details page. This page will show the user's detailed information (name, email & profile picture). The logged-in user can update their profile(image, displayName) by clicking on a button. (Alternatively, The profile edit form could be in a modal)
 
-1. Add a link for Password reset (use toast/ alert), (Don't worry if the email goes to the spam folder.)
+1. Add a link for Password reset (use toast/ alert), (Don't worry if the email goes to the spam folder.) 
 
-1. Explore & use these react packages in your website : react-icons, react-image-magnify, react-awesome-slider, react-loader etc.
+1. Explore & use these react packages in your website : 
+ - react-icons, ✅
+ - react-image-magnify,
+ - react-awesome-slider, 
+ -react-loader etc.
 
-1. Add an about us page
+1. Add an about us page ✅
 
 1. If you have time, try implementing a dark/light theme toggle. 
 
 
-3. Add something extra of your own. This will help you in the future to differentiate your project from others.
+3. Add something extra of your own. This will help you in the future to differentiate your project from others. ✅
 
 4. If you want to take a challenge. Consider using `react-leaflet` anywhere in your application ✅
 

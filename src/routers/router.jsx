@@ -1,5 +1,4 @@
 import {
-    Navigate,
     createBrowserRouter,
   } from "react-router-dom";
   import HomePage from "../pages/HomePag";
