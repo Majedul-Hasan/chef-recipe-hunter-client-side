@@ -40,9 +40,9 @@
 # Task description
 <!-- Main Requirements -->
 ## Main Requirements
-<ol>
-    <li>Create a website that shows the recipes of all available chefs. </li>
-    <li>The website must be exclusively dedicated to one cuisine(Bangladeshi, Chinese, Indian, Mediterranean, Thai, Japanese, Italian, African, Vietnamese, Srilankan, Nepalese, American, Korean, Mexican, Australian, Afgan, French, etc.). </li>
+<ol> 
+    <li>Create a website that shows the recipes of all available chefs. </li> ✅
+    <li>The website must be exclusively dedicated to one cuisine(Bangladeshi, Chinese, Indian, Mediterranean, Thai, Japanese, Italian, African, Vietnamese, Srilankan, Nepalese, American, Korean, Mexican, Australian, Afgan, French, etc.). </li> ✅
     <li>if you give Chinese Chef and Chinese food recipes, it will only have Chinese Chef and Chinese food recipes. You cannot add recipes from other countries—only one country chef and recipe.</li>   
 </li>
 </ol>
@@ -104,7 +104,7 @@
 
     -   View Recipes Button ✅
 
-1. Add at least **two** extra sections on the home page. Make sure the sections are meaningful for the website you are building.
+1. Add at least **two** extra sections on the home page. Make sure the sections are meaningful for the website you are building. ✅
 
 1. When a user clicks on a chef's **View Recipes** button, he/she will be redirected to the **Chef Recipes** page. The *Chef Recipes* page will have the following : 
 

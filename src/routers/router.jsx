@@ -10,6 +10,9 @@ import ContactPage from "../pages/ContactPage";
 import AboutUsPage from "../pages/AboutUsPage";
 import ProfilePage from "../pages/ProfilePage";
 import AllChefsPage from "../pages/AllChefsPage";
+import ChefsProfilePage from "../pages/ChefsProfilePage";
+import PrivetRoute from "./PrivetRoute";
+
 
   const router = createBrowserRouter([
     {
@@ -18,16 +21,16 @@ import AllChefsPage from "../pages/AllChefsPage";
       children:[
         {
             path: "/",
-            element: <HomePage/>,
+            element: <HomePage/>,       //done
             loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/chefsProfile-all/6`)
         },
         {
             path: "/login",
-            element: <LoginPage/>,
+            element: <LoginPage/>,  //done
         },
         {
             path: "/register",
-            element: <RegisterPage/>,
+            element: <RegisterPage/>,       //done
         },
         {
             path: "/profile",
@@ -35,20 +38,22 @@ import AllChefsPage from "../pages/AllChefsPage";
         },
         {
             path: "/about",
-            element: <AboutUsPage/>,
+            element: <AboutUsPage/>,        //done
         },
         {
             path: "/contact",
-            element: <ContactPage/>,
+            element: <ContactPage/>,        //done
         },
         {
             path: "/all-chefs",
             element: <AllChefsPage /> ,
-            loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/chefsProfile-all`)
+            loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/chefsProfile-all`)          //done
         },
         {
             path: "/chef/:id",
-            element: <div>Hello chefs recipe!</div>,
+            element:<PrivetRoute><ChefsProfilePage /></PrivetRoute>  ,
+            loader : ({params})=> fetch(`${import.meta.env.VITE_API_SERVER}/recipes/${params.id}`)          //done
+
         },
         {
             path: "/recipes",
