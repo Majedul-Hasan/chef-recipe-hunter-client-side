@@ -3,7 +3,7 @@ import TableForIngredients from "./TableForIngredients";
 
 
 const RecipeDetail = ({recipe}) => {
-  console.log(recipe);
+  // console.log(recipe);
 
   const {strCategory, strArea, strIngredients, strInstructions, strMeal, strMealThumb, strSource, strTags , idMeal} = recipe || {};
   return (

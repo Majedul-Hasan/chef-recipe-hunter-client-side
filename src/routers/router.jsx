@@ -15,6 +15,7 @@ import PrivetRoute from "./PrivetRoute";
 import PublicRoute from "./PublicRoute";
 import RecipePage from "../pages/RecipePage";
 import TermsPage from "../pages/TermsPage";
+import AllRecipesPage from "../pages/AllRecipesPage";
 
 
   const router = createBrowserRouter([
@@ -37,11 +38,11 @@ import TermsPage from "../pages/TermsPage";
         },
         {
             path: "/profile",
-            element: <ProfilePage/>,
+            element: <PrivetRoute><ProfilePage/></PrivetRoute>  ,
         },
         {
             path: "/terms",
-            element: <TermsPage/>,
+            element: <TermsPage/>,           //done
         },
         {
             path: "/about",
@@ -70,7 +71,7 @@ import TermsPage from "../pages/TermsPage";
         },
         {
             path: "/recipes",
-            element: <div>Hello recipes!</div>,
+            element: <PrivetRoute><AllRecipesPage/> </PrivetRoute>, 
             children:[
                  {
                     path: "alphabetical/:alphabet",
