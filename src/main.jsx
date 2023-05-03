@@ -7,6 +7,7 @@ import router from './routers/router.jsx'
 import AuthProviders from './providers/AuthProviders'
 import 'react-tooltip/dist/react-tooltip.css'
 import 'react-toastify/dist/ReactToastify.css';
+import 'leaflet/dist/leaflet.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

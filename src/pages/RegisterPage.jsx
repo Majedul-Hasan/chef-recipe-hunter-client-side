@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import { useContext, useState } from "react"
 import { AuthContext } from "../providers/AuthProviders"
@@ -7,6 +7,7 @@ import SocialLogin from "../components/SocialLogin"
 
 const RegisterPage = () => {
   const [errorMsg, setErrorMsg] = useState(null)
+  const navigate = useNavigate()
 
   const { createUser, updateUser, setUser} = useContext(AuthContext)
 
@@ -50,6 +51,8 @@ const RegisterPage = () => {
       setUser(loggedUser);    
       updateUser( name, photoUrl)
       formInput.reset()
+      navigate('/')
+
     })
     .catch(error =>{ 
       // const errorCode = error.code;
@@ -98,6 +101,10 @@ const RegisterPage = () => {
           <div className="form-control mt-6 my-2">
             <button className="btn bg-orange-400 border-orange-400 hover:bg-white hover:text-orange-500 hover:border-orange-500 ">Login</button>
           </div>
+          {
+          errorMsg &&  <p className="text-md text-red-400"> {errorMsg}        
+        </p>
+        }      
           <small className="text-md "> Already have an account?
                 <Link to='/login' className="label-text-alt link link-hover ml-1 text-orange-400">Login</Link>
           </small>

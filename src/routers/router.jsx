@@ -7,6 +7,8 @@ import LoginPage from "../pages/LoginPage";
 import PageNotFound404 from "../pages/PageNotFound404";
 import RegisterPage from "../pages/RegisterPage";
 import ContactPage from "../pages/ContactPage";
+import AboutUsPage from "../pages/AboutUsPage";
+import ProfilePage from "../pages/ProfilePage";
 
   const router = createBrowserRouter([
     {
@@ -26,8 +28,12 @@ import ContactPage from "../pages/ContactPage";
             element: <RegisterPage/>,
         },
         {
+            path: "/profile",
+            element: <ProfilePage/>,
+        },
+        {
             path: "/about",
-            element: <div>Hello about!</div>,
+            element: <AboutUsPage/>,
         },
         {
             path: "/contact",

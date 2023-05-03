@@ -39,7 +39,6 @@ const LoginPage = () => {
 
 
 
-
   return (
     <div className=" w-2/5 mx-auto my-20 ">
       <div className="border-[1px] border-solid border-gray-400p-4 rounded-md p-8 mb-10">
