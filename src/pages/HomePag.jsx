@@ -6,15 +6,11 @@ import SectionHero from "../components/SectionHero"
 import 'react-tooltip/dist/react-tooltip.css'
 import SectionCategory from "../components/SectionCategory"
 import SectionOrigin from "./SectionOrigin"
-import useHomeLoader from "../util/homeLoader"
 import { useEffect, useState } from "react"
 import Spinner from "../components/Spinner"
 
 
 const HomePage = () => {
-  // const data = useLoaderData()
-  // const homeLoader = useHomeLoader()
-  // console.log(homeLoader);
   const [data, setData]= useState()
   const [isLoading, setIsLoading] = useState(true)
 

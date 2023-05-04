@@ -21,6 +21,7 @@ import AlphaFetchedRecipes from "../components/AlphaFetchedRecipes";
 import CategoryFetchedRecipes from "../components/CategoryFetchedRecipes";
 import BlogPage from "../pages/BlogPage";
 import BlogDetailPage from "../pages/BlogDetailPage";
+import ExternalPage from "../pages/ExternalPage";
 
 
 
@@ -43,6 +44,10 @@ import BlogDetailPage from "../pages/BlogDetailPage";
         {
             path: "/register",
             element:<PublicRoute><RegisterPage/></PublicRoute> ,       //done
+        },
+        {
+            path: "/external-page/:origin",
+            element:<ExternalPage/> ,       //done
         },
         {
             path: "/profile",
