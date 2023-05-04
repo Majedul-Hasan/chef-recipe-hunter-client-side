@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import { useParams } from "react-router-dom"
 import {TiWarning} from 'react-icons/Ti';
 
