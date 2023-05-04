@@ -11,7 +11,7 @@ const BlogPage = () => {
     
   return (
     <>
-    <SectionHeroBlogPage />
+    <SectionHeroBlogPage bannerUrl ='https://bloggerspassion.com/wp-content/uploads/2019/12/best-programming-blogs.jpg' />
     <SectionHeader >Programming Blogs
 
     </SectionHeader>

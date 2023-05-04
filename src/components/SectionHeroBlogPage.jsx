@@ -2,9 +2,9 @@
 
 
 // eslint-disable-next-line react/prop-types
-const SectionHeroBlogPage = ({pageName, pageStory}) => {
+const SectionHeroBlogPage = ({pageName, pageStory, bannerUrl}) => {
   return (
-    <section className="page_header bg-cover bg-center py-20 min-h-[50vh] text-white flex items-center justify-center" style={{backgroundImage: 'url("https://bloggerspassion.com/wp-content/uploads/2019/12/best-programming-blogs.jpg")'}}>
+    <section className="page_header bg-cover bg-center py-20 min-h-[50vh] text-white flex items-center justify-center" style={{backgroundImage: `url("${bannerUrl}")`}}>
     <div className="">
         <div className="flex flex-row ">
         <div className=" md:w-full text-center">
