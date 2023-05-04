@@ -21,7 +21,7 @@ import AlphaFetchedRecipes from "../components/AlphaFetchedRecipes";
 import CategoryFetchedRecipes from "../components/CategoryFetchedRecipes";
 import BlogPage from "../pages/BlogPage";
 import BlogDetailPage from "../pages/BlogDetailPage";
-import useHomeLoader from "../util/homeLoader";
+
 
 
 
