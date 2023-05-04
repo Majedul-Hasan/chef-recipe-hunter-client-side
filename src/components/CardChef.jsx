@@ -4,15 +4,15 @@ import LazyLoad from 'react-lazy-load';
 
 // eslint-disable-next-line react/prop-types
 const CardChef = ({chef}) => {
-    const {_id, name, recipes,  experience, photoUrl, likes } = chef ||{}
-   
+    const {_id, name, recipes,  experience, photoUrl, likes } = chef ||{} 
+    
 
 
   return (
     <div className="card w-full  bg-base-100 shadow-xl">
-  <figure className="px-10 pt-10">
-  <LazyLoad threshold={0.55}  width={400} height={250}>
-    <img src={photoUrl} alt={name} className="rounded-xl" />
+  <figure className="px-0 sm:px-10 pt-10 block w-4/5 mx-auto">
+  <LazyLoad threshold={0.55}  height={250}>
+    <img src={photoUrl} alt={name} className="rounded-xl w-full" />
 
   </LazyLoad>
   </figure>
