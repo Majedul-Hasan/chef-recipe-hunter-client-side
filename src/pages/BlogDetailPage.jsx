@@ -2,7 +2,11 @@ import { useLoaderData } from "react-router-dom";
 import SectionHeroBlogPage from "../components/SectionHeroBlogPage";
 import SectionHeader from "../components/SectionHeader";
 import { AiFillEye, AiFillLike } from "react-icons/Ai";
-import { useState } from "react";
+import React, { useState } from "react";
+import Pdf from "react-to-pdf";
+import {GrDocumentPdf} from 'react-icons/Gr';
+
+const ref = React.createRef();
 
 
 const BlogDetailPage = () => {
@@ -11,10 +15,18 @@ const BlogDetailPage = () => {
     // console.log(blog);
     const [vote, setVote] =useState(likes)
 
+    const options = {
+      orientation: 'landscape',
+      unit: 'in',
+      format: [12, 14]
+  };
+
   return (
     <>
     <SectionHeroBlogPage bannerUrl ={photoUrl} />
     <div className="w-4/5 mx-auto  my-8">
+    <div className="w-full" ref={ref}>
+
     <div className="underline">
    
     <SectionHeader>{title}</SectionHeader>
@@ -39,9 +51,12 @@ const BlogDetailPage = () => {
         <button className="bg-indigo-500 text-white py-2 px-4 text-xl font-semibold rounded-md " onClick={()=>setVote(x=>x+1)}>Like</button>
         
          </div>
-
-
-
+    </div>
+    </div>
+    <div className="flex justify-center pl-3 py-9" >
+    <Pdf targetRef={ref} filename={`${title}.pdf`}  options={options} x={.5} y={.5} scale={0.8}>
+        {({ toPdf }) => <button className="border-2 px-4 py-2 flex justify-center items-center" onClick={toPdf}><span className="mx-2"> Generate Pdf </span><span className="text-white bg-slate-200"><GrDocumentPdf /></span></button>}
+      </Pdf>
     </div>
     </>
   )
