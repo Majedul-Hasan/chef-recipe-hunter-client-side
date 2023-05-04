@@ -21,6 +21,8 @@ import AlphaFetchedRecipes from "../components/AlphaFetchedRecipes";
 import CategoryFetchedRecipes from "../components/CategoryFetchedRecipes";
 import BlogPage from "../pages/BlogPage";
 import BlogDetailPage from "../pages/BlogDetailPage";
+import useHomeLoader from "../util/homeLoader";
+
 
 
   const router = createBrowserRouter([
@@ -31,7 +33,8 @@ import BlogDetailPage from "../pages/BlogDetailPage";
         {
             path: "/",
             element: <HomePage/>,       //done
-            loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/chefsProfile-all/6`)
+            // loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/chefsProfile-all/6`)
+            
         },
         {
             path: "/login",
