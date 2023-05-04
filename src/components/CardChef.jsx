@@ -10,8 +10,8 @@ const CardChef = ({chef}) => {
 
   return (
     <div className="card w-full  bg-base-100 shadow-xl">
-  <figure className="px-0 sm:px-10 pt-10 block w-4/5 mx-auto">
-  <LazyLoad threshold={0.55}  height={250}>
+  <figure className="px-0 sm:px-5 pt-10 block w-full mx-auto">
+  <LazyLoad threshold={0.65}  height={200} width={300}>
     <img src={photoUrl} alt={name} className="rounded-xl w-full" />
 
   </LazyLoad>
