@@ -28,6 +28,9 @@ const BlogDetailPage = () => {
     </div> 
     <div className="flex flex-col md:flex-row mt-8 mb-4 py-5 gap-8">
         <p className="text-lg flex-1">{description}</p>
+
+
+        
         <div className="flex-1 p-5 border-4 rounded-2xl">
             <img src={photoUrl} alt="" className="rounded-2xl" />
         </div>
