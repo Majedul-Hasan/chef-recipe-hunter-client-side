@@ -19,6 +19,7 @@ import AllRecipesPage from "../pages/AllRecipesPage";
 import PrimaryFetchedRecipes from "../components/PrimaryFetchedRecipes";
 import AlphaFetchedRecipes from "../components/AlphaFetchedRecipes";
 import CategoryFetchedRecipes from "../components/CategoryFetchedRecipes";
+import BlogPage from "../pages/BlogPage";
 
 
   const router = createBrowserRouter([
@@ -50,6 +51,8 @@ import CategoryFetchedRecipes from "../components/CategoryFetchedRecipes";
         {
             path: "/about",
             element: <AboutUsPage/>,        //done
+            loader : ()=> fetch(`${import.meta.env.VITE_API_SERVER}/chefsProfile-all/6`)
+
         },
         {
             path: "/contact",
@@ -102,7 +105,7 @@ import CategoryFetchedRecipes from "../components/CategoryFetchedRecipes";
         },        
         {
             path: "/blogs",
-            element: <div>Hello blogs!</div>,
+            element: <BlogPage/>,
         },
         {
             path: "/chefs",
